@@ -1,0 +1,359 @@
+/*
+ Theme Name:   Univers Fantastiques
+ Description:  Thème enfant Astra personnalisé pour universfantastiques.fr (cartes critiques, pages single, pages spéciales).
+ Author:       Florian Assié
+ Author URI:   https://universfantastiques.fr
+ Template:     astra
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  universfantastiques-theme
+*/
+
+/* 📚 Miniature grid (carte critique littéraire) */
+.book-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: 'Georgia', serif;
+  position: relative;
+  width: 100%;
+  max-width: unset;
+}
+
+.cover-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.note-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #fff;
+  padding: 4px 6px;
+  border-radius: 20px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #333;
+  font-family: sans-serif;
+}
+
+.note-badge svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.content {
+  padding: 1rem 1.2rem;
+}
+
+.title {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.author {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  color: #555;
+  font-style: italic;
+}
+
+.excerpt {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  background: #2c3e50;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.read-more:hover {
+  background: #34495e;
+}
+
+/* 🧱 Grille responsive pour la mise en page blog layout 4 */
+.blog-layout-4 {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.blog-layout-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.book-card {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 400px;
+}
+
+.book-card .content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.cover-container {
+  position: relative;
+  min-height: 220px; /* ajuste selon ton design */
+  background-color: #e7f1ee; /* couleur de fond légère si pas d’image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-container img.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.book-card .content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banner {
+	max-width: 1200px; /* ou la même que ton container */
+	height: 300px; /* ou la hauteur souhaitée */
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.article-classique {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.article-classique .entry-header {
+  margin-bottom: 1.5rem;
+}
+
+.article-classique .entry-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.article-classique .entry-meta {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.article-classique .entry-thumbnail img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.article-classique .entry-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.article-classique .entry-footer {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+.acf-fields-block {
+    background: #f9f9f9;
+    border-left: 4px solid #3b3b3b;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+.acf-book-details {
+	background: #f8f8f8;
+	border: 1px solid #ddd;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.acf-meta-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.acf-meta-list li {
+	margin-bottom: 0.6rem;
+	font-size: 1rem;
+}
+.acf-meta-list strong {
+	display: inline-block;
+	min-width: 160px;
+	color: #444;
+}
+.acf-meta-list span {
+	color: #222;
+}
+.acf-resume, .acf-avis {
+	margin-bottom: 2rem;
+}
+.acf-resume h2, .acf-avis h2 {
+	font-size: 1.3rem;
+	color: #333;
+	margin-bottom: 0.5rem;
+}
+.acf-amazon-link.button {
+	display: inline-block;
+	background-color: #d35400;
+	color: white;
+	padding: 0.6rem 1.2rem;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: background 0.2s ease;
+}
+.acf-amazon-link.button:hover {
+	background-color: #b84300;
+}
+.ast-header-widget-area img {
+  max-width: 1280px; /* ou 90% si tu veux du responsive */
+  height: auto;
+  max-height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+/* Élargir le contenu des articles à la même largeur que la bannière */
+.single-post .site-content .content-area {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.single-post .entry-content {
+  padding: 0 2em;
+}
+
+/* Optionnel : centrer la navigation précédente/suivante */
+.navigation.post-navigation {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Bannière */
+.wp-block-image img {
+    height: auto !important;
+    width: auto  !important;
+	align: center ; 
+}
+.ast-narrow-container .site-content > .ast-container {
+        max-width: 80% !important;
+    }
+:root {
+  --bg-card: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #333333;
+  --bg-page: #e2e8e2;
+}
+.card {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  padding: 1rem;
+  border-radius: .5rem;
+}
+.card .excerpt {
+  color: var(--text-secondary);
+}
+.card .read-more {
+  background: #2c3e50;
+  color: #fff;
+}
+.card .read-more:hover {
+  background: #1a242f;
+}
+.book-meta, .book-summary, .book-review {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: .5rem;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media(min-width: 1024px) {
+  .book-detail {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+}
+@media(max-width: 767px) {
+  .nav-menu { display: none; }
+  .menu-burger { display: block; }
+  .book-detail { display: block; }
+}
+body {
+  font-family: "EB Garamond", serif;
+  line-height: 1.6;
+}
+h1, h2, h3 {
+  font-weight: 700;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; margin-top: 1.5rem; }
+a, .btn {
+  text-decoration: none;
+  transition: color .2s;
+}
+a:hover, .btn:hover {
+  color: #c0392b;
+}
+.read-more i {
+  margin-left: .3rem;
+  transition: transform .2s;
+}
+.read-more:hover i {
+  transform: translateX(.2rem);
+}
